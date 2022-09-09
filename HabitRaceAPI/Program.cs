@@ -17,6 +17,9 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
+// Dependency injection– if interface is requested, give them a concrete implementation.
+builder.Services.AddScoped<IHabitRepo, HabitRepo>();
+
 var app = builder.Build();
 //... rest of the code omitted for brevity
 
