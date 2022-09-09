@@ -1,7 +1,9 @@
 version: "3.8"
 services:
-  sqlserver:
-    image: "mcr.microsoft.com/mssql/server:2019-latest"
+  postgres:
+    image: postgres:13-buster
+      - POSTGRES_USER=lkdm
+      - POSTGRES_PASSWORD=yPVPuBjJ6yvGPyLegXGcsoxbFRNz
     environment:
       ACCEPT_EULA: "Y"
       MSSQL_PID: "Express"
