@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using HabitRaceAPI.Models;
 using HabitRaceAPI.Data;
+using AutoMapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -19,6 +21,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Dependency injection– if interface is requested, give them a concrete implementation.
 builder.Services.AddScoped<IHabitRepo, HabitRepo>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 //... rest of the code omitted for brevity
