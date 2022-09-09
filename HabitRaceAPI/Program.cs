@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using HabitRaceAPI.Models;
+using HabitRaceAPI.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,7 +14,7 @@ builder.Services.AddSwaggerGen();
 
 // Connect to PostgreSQL Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<HabitDb>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 var app = builder.Build();
@@ -54,13 +55,4 @@ app.Run();
 record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
-
-class HabitDb : DbContext
-{
-    public HabitDb(DbContextOptions<HabitDb> options) : base(options)
-    {
-
-    }
-    public DbSet<Habit> Habits => Set<Habit>();
 }
