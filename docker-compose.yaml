@@ -2,10 +2,10 @@ version: "3.8"
 services:
   postgres:
     image: postgres:13-buster
+    environment:
       - POSTGRES_USER=lkdm
       - POSTGRES_PASSWORD=yPVPuBjJ6yvGPyLegXGcsoxbFRNz
-    environment:
-      ACCEPT_EULA: "Y"
-      MSSQL_PID: "Express"
     ports:
-      - "1433:1433"
+      - 5432:5432
+    volumes:
+      - ./data/pg:/var/lib/postgresql/data
