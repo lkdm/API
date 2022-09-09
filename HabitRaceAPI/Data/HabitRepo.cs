@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using HabitRaceAPI.Models;
+
 
 namespace HabitRaceAPI.Data;
 
@@ -9,24 +11,33 @@ public class HabitRepo : IHabitRepo
     {
         _context = context;
     }
-    public Task CreateHabit(Habit habit)
+    public async Task CreateHabit(Habit habit)
     {
-        throw new NotImplementedException();
+        if (habit == null)
+        {
+            throw new ArgumentNullException(nameof(habit));
+        }
+        await _context.AddAsync(habit);
     }
 
     public void DeleteHabit(Habit habit)
     {
-        throw new NotImplementedException();
+        if (habit == null)
+        {
+            throw new ArgumentNullException(nameof(habit));
+        }
+        _context.Habits.Remove(habit);
     }
 
-    public Task<IEnumerable<Habit>> GetAllHabits()
+    public async Task<IEnumerable<Habit>> GetAllHabits()
     {
-        throw new NotImplementedException();
+
+        return await _context.Habits.ToListAsync();
     }
 
-    public Task<Habit?> GetHabitById(Guid Id)
+    public async Task<Habit?> GetHabitById(Guid id)
     {
-        throw new NotImplementedException();
+        return await _context.Habits.FirstOrDefaultAsync(c => c.Id == id);
     }
 
     public async Task SaveChanges()
