@@ -272,4 +272,4 @@ __pycache__/
 .vscode/
 
 # Postgres
-data/
+data/pg/
