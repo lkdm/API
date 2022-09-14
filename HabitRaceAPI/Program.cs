@@ -46,4 +46,5 @@ app.MapGet("api/v2022q4/habits", async (IHabitRepo repo, IMapper mapper) =>
 });
 
 
+app.Logger.LogInformation("👉 The application started");
 app.Run();
