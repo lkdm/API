@@ -37,7 +37,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 // Endpoints
-app.MapGet("api/v2022q4/status", () => Results.Ok());
+app.MapGet("api/v2022q4/status", () => Results.Ok("Okay"));
 
 app.MapGet("api/v2022q4/habits", async (IHabitRepo repo, IMapper mapper) =>
 {
