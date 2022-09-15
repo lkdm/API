@@ -1,7 +1,7 @@
-using HabitRaceAPI.Models;
+using RainfallAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace HabitRaceAPI.Data
+namespace RainfallAPI.Data
 {
     public class AppDbContext : DbContext
     {

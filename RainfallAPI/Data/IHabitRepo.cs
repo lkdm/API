@@ -1,6 +1,6 @@
-using HabitRaceAPI.Models;
+using RainfallAPI.Models;
 
-namespace HabitRaceAPI.Data
+namespace RainfallAPI.Data
 {
     public interface IHabitRepo
     {

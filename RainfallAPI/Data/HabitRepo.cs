@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using HabitRaceAPI.Models;
+using RainfallAPI.Models;
 
 
-namespace HabitRaceAPI.Data;
+namespace RainfallAPI.Data;
 
 public class HabitRepo : IHabitRepo
 {

@@ -1,4 +1,4 @@
-namespace HabitRaceAPI.Dtos
+namespace RainfallAPI.Dtos
 {
     public class HabitReadDto
     {

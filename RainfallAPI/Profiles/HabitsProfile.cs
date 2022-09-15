@@ -1,8 +1,8 @@
 using AutoMapper;
-using HabitRaceAPI.Models;
-using HabitRaceAPI.Dtos;
+using RainfallAPI.Models;
+using RainfallAPI.Dtos;
 
-namespace HabitRaceAPI.Profiles
+namespace RainfallAPI.Profiles
 {
     public class HabitsProfile : Profile
     {

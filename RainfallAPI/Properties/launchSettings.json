@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "HabitRaceAPI": {
+    "RainfallAPI": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
