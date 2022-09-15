@@ -8,6 +8,11 @@ namespace RainfallAPI.Models
     /// </summary>
     public class Station: ModelBase
     {
+        public Station()
+        {
+            this.Recordings = new List<Recording>();
+        }
+
         [MaxLength(255)]
         public string? Description { get; set; }
 
@@ -16,5 +21,10 @@ namespace RainfallAPI.Models
 
         [Required]
         public double Lon { get; set; }
+
+        public virtual List<Recording> Recordings { get; set; }
+
+        public Guid PersonId { get; set; }
+        public virtual Person Person { get; set; }
     }
 }

@@ -8,9 +8,7 @@ namespace RainfallAPI.Models
 
     public enum Unit : int
     {
-        [Description("Millimetres")]
         Millimetres = 0,
-        [Description("Inches")]
         Inches = 1
     }
 }

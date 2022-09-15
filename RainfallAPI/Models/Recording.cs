@@ -4,8 +4,6 @@ namespace RainfallAPI.Models
 {
     public class Recording : ModelBase
     {
-        public Guid StationId { get; set; }
-
         public double Amount { get; set; }
 
         public Unit Unit { get; set; }
@@ -16,6 +14,7 @@ namespace RainfallAPI.Models
         /// </summary>
         public DateTimeOffset RecordedAt { get; set; }
 
+        public Guid StationId { get; set; }
         public virtual Station Station { get; set; }
     }
 }
