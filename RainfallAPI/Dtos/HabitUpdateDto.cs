@@ -1,12 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace HabitRaceAPI.Models
+namespace RainfallAPI.Dtos
 {
-    public class Habit
+    public class HabitUpdateDto
     {
-        [Key]
-        public Guid Id { get; set; }
-
         [MaxLength(1)]
         public string? Icon { get; set; }
 

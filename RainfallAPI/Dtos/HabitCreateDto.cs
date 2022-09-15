@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace HabitRaceAPI.Dtos
+namespace RainfallAPI.Dtos
 {
-    public class HabitUpdateDto
+    public class HabitCreateDto
     {
         [MaxLength(1)]
         public string? Icon { get; set; }

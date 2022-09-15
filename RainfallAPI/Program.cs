@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using HabitRaceAPI.Models;
-using HabitRaceAPI.Data;
+using RainfallAPI.Models;
+using RainfallAPI.Data;
 using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
